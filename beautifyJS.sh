@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #install js-beautify -> sudo npm install -g js-beautify
-js-beautify $1 > .beautified
+js-beautify -b preserve-inline $1 > .beautified
 mv .beautified $1
 
 message="${LIGHTGRAY} Plz run test to see if something is broken"
