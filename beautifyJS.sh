@@ -1,5 +1,11 @@
 #! /bin/bash
 
+: which js-beautify
+is_installed=$?
+if [ $is_installed -ne 0 ]; then
+  sudo npm install -g js-beautify
+fi
+
 source_file=$1
 
 #install js-beautify -> sudo npm install -g js-beautify
@@ -12,7 +18,7 @@ LIGHTGRAY='\033[0;37m'
 NC='\033[0m'
 
 #grep --version should be 2.10 or above
-echo "$source_file" | grep -io "test"
+echo "$source_file" | : grep -io "test"
 result=$?
 
 if [ $result = 0 ]; then 
