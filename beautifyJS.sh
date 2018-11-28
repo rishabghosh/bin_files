@@ -32,3 +32,4 @@ fi
 echo -e "${GREEN} $source_file ${LIGHTGRAY} is beautified"
 echo -e "$message"
 
+
