@@ -11,6 +11,8 @@ echo "*.swp" >  .gitignore
 echo "*.swn" >> .gitignore
 echo "*.swo" >> .gitignore
 echo ".jshintrc" >> .gitignore
+echo ".eslintrc.*" >> .gitignore
+echo ".package.*" >> .gitignore
 
 echo '{"esversion": 6}' > .jshintrc
 
@@ -20,6 +22,12 @@ chmod +x .git/hooks/pre-commit
 
 echo ""
 echo -e "${GREEN}.gitignore"
-echo -e "${GREEN}.jshintrc"
+echo -e ".eslintrc.*"
+echo -e ".jshintrc"
+echo -e ".package.*"
 echo -e "${NC}.git/hooks/${RED}pre-commit ${NC}created"
+
+#initialize eslint
+npm init
+
 
